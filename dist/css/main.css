@@ -78,8 +78,17 @@ section.hero .hero-content {
   justify-content: space-between;
   padding: 0 20px;
   width: 85%; }
+  @media (max-width: 768px) {
+    section.hero .hero-content {
+      flex-direction: column-reverse; } }
   section.hero .hero-content .hero-left {
     flex: 0 0 50%; }
+    @media (max-width: 768px) {
+      section.hero .hero-content .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; } }
     section.hero .hero-content .hero-left h1.hero-title {
       font-style: normal;
       font-weight: 300;
@@ -183,7 +192,6 @@ section.articles {
       grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
       gap: 30px; }
       section.articles .article-content.container .rows .row {
-        width: 255px;
         overflow: hidden;
         border-radius: 5px;
         background: #ffffff; }
