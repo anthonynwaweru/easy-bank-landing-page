@@ -158,6 +158,10 @@ section.banking {
     width: 85%;
     .banking-header {
       width: 60%;
+      @media (max-width: 768px) {
+        text-align: center;
+        width: 100%;
+      }
       h2 {
         font-style: normal;
         font-weight: 300;
@@ -167,6 +171,9 @@ section.banking {
         color: $font-color-title;
         margin-bottom: 1rem;
         width: 90%;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
       }
       p {
         font-style: normal;
@@ -176,6 +183,9 @@ section.banking {
         letter-spacing: -0.28125px;
         color: $font-color;
         width: 95%;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -189,6 +199,10 @@ section.banking {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        @media (max-width: 768px) {
+          align-items: center;
+          text-align: center;
+        }
 
         h1 img {
           max-height: 72px;
@@ -222,6 +236,9 @@ section.articles {
     width: 85%;
     .article-header {
       margin-bottom: 40px;
+      @media (max-width: 768px) {
+        text-align: center;
+      }
       h3.title {
         font-style: normal;
         font-weight: 300;
