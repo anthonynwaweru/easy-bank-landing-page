@@ -18,6 +18,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="/dist/css/main.css" />
+    <script defer src="./JS/script.js"></script>
 
     <title>Frontend Mentor | Easybank landing page</title>
 
@@ -31,7 +32,7 @@
             <div class="navbar-brand">
               <img src="./images/logo.svg" alt="easybank" />
             </div>
-            <div class="navbar-menu">
+            <div class="navbar-menu mobile-hidden">
               <ul class="navbar-items">
                 <li><a href="" class="navbar-item">Home</a></li>
                 <li><a href="" class="navbar-item">About</a></li>
@@ -43,12 +44,30 @@
             <div class="navbar-btn">
               <button class="btn"><a href="#">Request Invite</a></button>
             </div>
+            <div class="navbar-mobile-menu lg-hidden">
+              <ul class="navbar-items">
+                <li><a href="" class="navbar-item">Home</a></li>
+                <li><a href="" class="navbar-item">About</a></li>
+                <li><a href="" class="navbar-item">Contact</a></li>
+                <li><a href="" class="navbar-item">Blog</a></li>
+                <li><a href="" class="navbar-item">Careers</a></li>
+              </ul>
+            </div>
+            <div class="hamburger lg-hidden">
+              <img
+                class="open-close-menu"
+                src="./images/icon-hamburger.svg"
+                alt="menu"
+              />
+            </div>
           </div>
         </div>
       </nav>
     </header>
     <main class="content" id="home">
       <section class="hero">
+        <div class="overlay"></div>
+
         <div class="hero-content container">
           <div class="hero-left">
             <h1 class="hero-title">Next generation digital banking</h1>

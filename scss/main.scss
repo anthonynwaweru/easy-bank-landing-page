@@ -47,10 +47,13 @@ header {
   background-color: #ffffff;
   width: 100vw;
   nav {
+    position: relative;
     .container {
       width: 85%;
     }
     .navbar {
+      position: relative;
+      z-index: 1;
       padding: 0 20px;
       display: flex;
       align-items: center;
@@ -60,6 +63,16 @@ header {
         height: 20px;
         img {
           object-fit: cover;
+        }
+      }
+      .navbar-menu.mobile-hidden {
+        @media (max-width: 880px) {
+          display: none;
+        }
+      }
+      .navbar-btn {
+        @media (max-width: 880px) {
+          display: none;
         }
       }
       .navbar-items {
@@ -86,11 +99,60 @@ header {
           }
         }
       }
+
+      .navbar-mobile-menu.lg-hidden {
+        position: absolute;
+        top: 88px;
+        width: 85%;
+        background-color: #ffffff;
+        padding: 2rem 4rem;
+        border-radius: 4px;
+        z-index: 10;
+        display: none;
+        animation: all 0.5s;
+        transform: rotate(45%);
+
+        // display: none;
+
+        .navbar-items {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          li {
+            margin: 0 0 24px 0;
+            &:last-of-type {
+              margin: 0;
+            }
+            a {
+              cursor: pointer;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 21px;
+              text-align: center;
+              color: $font-color-title;
+              &:hover {
+                color: $font-hover-color;
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        @media (max-width: 879px) {
+          display: block;
+        }
+      }
     }
   }
 }
 
 section.hero {
+  position: relative;
   .hero-content {
     display: flex;
     align-items: center;
@@ -400,4 +462,12 @@ footer {
       }
     }
   }
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
 }
